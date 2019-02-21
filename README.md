@@ -1,4 +1,6 @@
 # simple-hooks
+A simple ReactJs application that demonstrates how to use react hooks _useEffect_ and _useState_ in function-based 
+components
 
 ## Setup
 
@@ -6,7 +8,7 @@ Use nvm for installing and managing node version.
 - `$ nvm install 9.11.1`
 - `$ nvm use 9.11.1`
 
-1. Clone the repository: `$ git clone lll`
+1. Clone the repository: `$ git clone https://github.com/bobmacneal/simple-hooks.git`
 2. Install [Yarn](https://yarnpkg.com) for package management. 
 3. Install node dependencies using yarn: `$ yarn'
 
