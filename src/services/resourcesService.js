@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {JSON_PLACEHOLDER_API_URL} from "../constants"
+import {FETCH_LIMIT, JSON_PLACEHOLDER_API_URL} from "../constants"
 import { useEffect, useState } from 'react'
 
 export const getResources = resource => {
@@ -15,5 +15,5 @@ export const getResources = resource => {
     },
     [resource] // useEffect needs this to determine if function should be run (won't run if [resource] hasn't changed).
   )
-  return resources.slice(0, 100) // limit to 100 records
+  return resources.slice(0, FETCH_LIMIT) // limit to FETCH_LIMIT records
 }
