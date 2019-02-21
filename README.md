@@ -4,10 +4,6 @@ components.
 
 ## setup
 
-Use nvm for installing and managing node version.
-- `nvm install 9.11.1`
-- `nvm use 9.11.1`
-
 1. Clone the repository: `git clone https://github.com/bobmacneal/simple-hooks.git`
 2. Install [Yarn](https://yarnpkg.com) for package management. 
 3. Install node dependencies using yarn: `yarn`
