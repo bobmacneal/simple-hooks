@@ -1,9 +1,9 @@
-import React from 'react'
+import DoneIcon from '@material-ui/icons/Done'
 import { getResources } from "../services/resourcesService"
 import PropTypes from 'prop-types'
+import React from 'react'
+import { RESOURCE_TYPE } from '../constants'
 import { withStyles } from "@material-ui/core"
-import {RESOURCE_TYPE} from '../constants'
-import DoneIcon from '@material-ui/icons/Done';
 
 const ResourceList = ({ classes, resourceType }) => {
   const resourcesArray = getResources(resourceType)
@@ -21,25 +21,26 @@ const ResourceList = ({ classes, resourceType }) => {
         </div>
       )
     } else {
-      return <div className={classes.cell}>{item.body}</div>
+      return (
+        <div className={classes.cell}>
+          {item.body}
+        </div>)
     }
   }
 
   return (
     <React.Fragment>
-      {
-        resourcesArray.map(
-          (item, index) => {
-            return (
-              <div className={classes.list} key={index}>
-                <div className={classes.cell} style={{maxWidth: 50}}>{item.id}</div>
-                <div className={classes.cell}>{item.title}</div>
-                {renderVariableColumn(resourceType, item)}
-              </div>
-            )
-          }
-        )
-      }
+      {resourcesArray.map(
+        (item, index) => {
+          return (
+            <div className={classes.list} key={index}>
+              <div className={classes.cell} style={{maxWidth: 50}}>{item.id}</div>
+              <div className={classes.cell}>{item.title}</div>
+              {renderVariableColumn(resourceType, item)}
+            </div>
+          )
+        }
+      )}
     </React.Fragment>
   )
 }
@@ -65,6 +66,5 @@ const styles = theme => ({
     width: '30%',
   },
 })
-
 
 export default withStyles(styles)(ResourceList)

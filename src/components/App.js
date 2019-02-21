@@ -1,6 +1,7 @@
 import { AppBar, Typography, withStyles,} from '@material-ui/core'
 import Logo from '../logo-32x32.png'
-import {MuiThemeProvider} from '@material-ui/core/styles'
+import { MuiThemeProvider } from '@material-ui/core/styles'
+import PropTypes from 'prop-types'
 import React from 'react'
 import Resource from './Resource'
 import simpleTheme from '../styles/simpleTheme'
@@ -30,6 +31,10 @@ const App = ({classes}) => (
   </MuiThemeProvider>
 )
 
+App.propTypes = {
+  classes: PropTypes.object.isRequired,
+}
+
 const globalStyles = {
   appBar: {
     alignItems: 'center',
@@ -58,4 +63,3 @@ const globalStyles = {
 }
 
 export default withStyles(globalStyles)(App)
-

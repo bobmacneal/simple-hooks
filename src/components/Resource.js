@@ -1,10 +1,11 @@
+import PostIcon from '@material-ui/icons/Notes'
+import PhotoIcon from '@material-ui/icons/Photo'
+import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 import ResourceList from './ResourceList'
-import PostIcon from '@material-ui/icons/Notes';
-import PhotoIcon from '@material-ui/icons/Photo';
-import TodoIcon from '@material-ui/icons/EventNote';
-import {Tab, Tabs, withStyles} from '@material-ui/core'
-import {RESOURCE_TYPE} from '../constants'
+import { RESOURCE_TYPE } from '../constants'
+import { Tab, Tabs, withStyles } from '@material-ui/core'
+import TodoIcon from '@material-ui/icons/EventNote'
 
 const Resource = ({classes}) => {
   // Following uses array destructuring.
@@ -47,11 +48,14 @@ const Resource = ({classes}) => {
   )
 }
 
+Resource.propTypes = {
+  classes: PropTypes.object.isRequired,
+}
+
 const styles = theme => ({
   mainContent: {
     paddingTop: theme.spacing.unit * 3,
   },
 })
-
 
 export default withStyles(styles)(Resource)
