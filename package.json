@@ -1,7 +1,30 @@
 {
   "name": "simple-hooks",
   "version": "0.1.0",
-  "private": true,
+  "description": "ReactJs application that demonstrates useEffect and useState hooks in function-based components",
+  "main": "index.js",
+  "scripts": {
+    "start": "REACT_APP_VERSION=$npm_package_version react-scripts start",
+    "build": "REACT_APP_VERSION=$npm_package_version react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bobmacneal/simple-hooks.git"
+  },
+  "keywords": [
+    "reactJs",
+    "react hooks",
+    "useEffect",
+    "useState"
+  ],
+  "author": "Bob MacNeal <bob.macneal@workingcompany.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bobmacneal/simple-hooks/issues"
+  },
+  "homepage": "https://github.com/bobmacneal/simple-hooks#readme",
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^3.0.2",
@@ -11,12 +34,6 @@
     "react-dom": "^16.8.2",
     "react-scripts": "2.1.5",
     "typeface-roboto": "^0.0.54"
-  },
-  "scripts": {
-    "start": "REACT_APP_VERSION=$npm_package_version react-scripts start",
-    "build": "REACT_APP_VERSION=$npm_package_version react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
