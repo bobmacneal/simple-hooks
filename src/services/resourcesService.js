@@ -15,5 +15,5 @@ export const getResources = resource => {
     },
     [resource] // useEffect needs this to determine if function should be run (won't run if [resource] hasn't changed).
   )
-  return resources
+  return resources.slice(0, 100) // limit to 100 records
 }

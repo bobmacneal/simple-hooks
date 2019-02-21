@@ -1,21 +1,44 @@
-import React, { useState } from 'react'
-import ResourceList from './ResourceList'
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  withStyles,
+} from '@material-ui/core'
+import {MuiThemeProvider} from '@material-ui/core/styles'
+import React from 'react'
+import Resource from './Resource'
+import simpleTheme from '../styles/simpleTheme'
+import 'typeface-roboto'
 
-const App = () => {
-  // Following uses array destructuring.
-  // The first element is the value. The second element is a setter.
-  // Finally, useState('posts') is the initial value.
-  const [resourceType, setResourceType] = useState('posts')
-
-  return (
-    <div>
-      <div>
-        <button onClick={() => setResourceType('posts')}>Posts</button>
-        <button onClick={() => setResourceType('todos')}>Todos</button>
-      </div>
-      <ResourceList resourceType={resourceType}/>
+const App = () => (
+  <MuiThemeProvider theme={simpleTheme}>
+    <AppBar color="primary" elevation={1} position="fixed">
+      <Toolbar>
+        <Typography
+          variant="h6"
+          color="inherit"
+          children="simple-hooks"
+        />
+      </Toolbar>
+    </AppBar>
+    <div style={{margin: '80px 15px 15px 15px'}}>
+      <Resource />
     </div>
-  )
+
+  </MuiThemeProvider>
+)
+
+const globalStyles = {
+  '@global': {
+    'html': {
+      backgroundColor: '#fff',
+      fontFamily: '"Roboto", sans-serif',
+    },
+    'body': {
+      backgroundColor: '#fff',
+    },
+  },
 }
 
-export default App
+export default withStyles(globalStyles)(App)
+
