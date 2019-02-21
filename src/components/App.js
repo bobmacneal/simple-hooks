@@ -1,5 +1,5 @@
 import { AppBar, Typography, withStyles,} from '@material-ui/core'
-import Logo from '../logo-32x32.png'
+import Logo from '../images/logo-32x32.png'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import PropTypes from 'prop-types'
 import React from 'react'
