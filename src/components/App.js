@@ -17,7 +17,7 @@ const App = ({classes}) => (
         <div className={classes.title}>
           <Typography
             align="right"
-            variant="subheading"
+            variant="subtitle2"
             color="inherit"
           >
             {`simple-hooks v-${process.env.REACT_APP_VERSION}`}
