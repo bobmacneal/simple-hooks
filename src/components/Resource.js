@@ -20,7 +20,7 @@ const Resource = ({classes}) => {
 
     switch(value) {
       case RESOURCE_TYPE.USERS:
-        setResourceFields(['id', 'name', 'username', 'email'])
+        setResourceFields(['id', 'name', 'email'])
         break;
       case RESOURCE_TYPE.POSTS:
         setResourceFields(['id', 'title', 'body'])
