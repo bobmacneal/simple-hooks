@@ -1,21 +1,21 @@
+import React, {useState} from 'react'
+import {Tab, Tabs, withStyles} from '@material-ui/core'
 import ItemList from './ItemList'
-import PostIcon from '@material-ui/icons/Notes'
 import PhotoIcon from '@material-ui/icons/Photo'
-import UserIcon from '@material-ui/icons/PeopleOutline'
-import PropTypes from 'prop-types'
-import React, { useState } from 'react'
-import { RESOURCE_TYPE } from '../constants'
-import { Tab, Tabs, withStyles } from '@material-ui/core'
+import PostIcon from '@material-ui/icons/Notes'
+import {PropTypes} from 'prop-types'
+import {RESOURCE_TYPE} from '../constants'
 import TodoIcon from '@material-ui/icons/EventNote'
+import UserIcon from '@material-ui/icons/PeopleOutline'
 
-const Resource = ({classes}) => {
+function Resource ({classes}) {
   // Following uses array destructuring.
   // The first element is the value. The second element is a setter.
   // Finally, useState(RESOURCE_TYPE.POSTS) is the initial value.
   const [resourceType, setResourceType] = useState(RESOURCE_TYPE.TODOS)
   const [resourceFields, setResourceFields] = useState(['id', 'title'])
 
-  const handleChangeTab = (event, value) => {
+  function handleSwitchTab (event, value) {
     setResourceType(value)
 
     switch(value) {
@@ -37,7 +37,7 @@ const Resource = ({classes}) => {
     <React.Fragment>
       <Tabs
         indicatorColor="primary"
-        onChange={handleChangeTab}
+        onChange={handleSwitchTab}
         textColor="inherit"
         value={resourceType}
       >

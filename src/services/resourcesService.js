@@ -1,6 +1,6 @@
-import axios from 'axios'
 import {FETCH_LIMIT, JSON_PLACEHOLDER_API_URL} from "../constants"
-import { useEffect, useState } from 'react'
+import {useEffect, useState} from 'react'
+import axios from 'axios'
 
 export const getResources = resource => {
   const [resources, setResources] = useState([])

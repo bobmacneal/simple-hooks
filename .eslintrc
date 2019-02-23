@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "react-app",
+    "standard-jsx"
+  ],
+  "parser": "babel-eslint",
+  "rules": {
+    "comma-dangle": ["error", "always-multiline"],
+    "jsx-quotes": ["error", "prefer-double"],
+    "no-console": "warn",
+    "sort-imports": ["error", {"ignoreCase": true}],
+    "strict": "off"
+  }
+}

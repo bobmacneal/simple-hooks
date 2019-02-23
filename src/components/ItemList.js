@@ -1,10 +1,10 @@
-import { getResources } from '../services/resourcesService'
-import { ID_FIELD } from '../constants'
-import PropTypes from 'prop-types'
+import {getResources} from '../services/resourcesService'
+import {ID_FIELD} from '../constants'
+import {PropTypes} from 'prop-types'
 import React from 'react'
-import { withStyles } from '@material-ui/core'
+import {withStyles} from '@material-ui/core'
 
-const ItemList = ({ classes, resourceType, fields }) => {
+function ItemList ({classes, resourceType, fields}) {
   const resources = getResources(resourceType)
 
   const renderRow = (resourceItem) => {
@@ -15,7 +15,6 @@ const ItemList = ({ classes, resourceType, fields }) => {
         let style
         if (field === ID_FIELD) {
           className = classes.idField
-          style = {width: '50px'}
         } else {
           className = classes.textField
           style = {width: `${Math.round( 100 / fields.length )}%`}
@@ -68,6 +67,7 @@ const styles = theme => ({
   idField: {
     paddingBottom: theme.spacing.unit * 2,
     paddingTop: theme.spacing.unit * 2,
+    width: theme.spacing.unit * 8,
   },
   textField: {
     flexGrow: 1,
