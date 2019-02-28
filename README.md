@@ -23,4 +23,6 @@ primer on React hooks:
 - **simple-hooks** uses [JSONPlaceholder](https://jsonplaceholder.typicode.com/), the _"Fake Online REST API for 
 Testing and Prototyping"_, to fetch post, todo, and photo data from a remote API.
 
+- [How to fetch data with React Hooks?](https://www.robinwieruch.de/react-hooks-fetch-data/) by [Robin Wieruch](https://github.com/rwieruch).
+
 - **simple-hooks** was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
