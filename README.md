@@ -19,7 +19,7 @@ components. A custom hook `useAxiosGet` is introduced in an example service func
 [Section 25: Hooks with Functional Components](https://www.udemy.com/react-redux/learn/v4/overview).
 
 - **simple-hooks** uses [JSONPlaceholder](https://jsonplaceholder.typicode.com/), the _"Fake Online REST API for 
-Testing and Prototyping"_, to fetch post, todo, and photo data from a remote API.
+Testing and Prototyping"_, to fetch post, todo, user, and photo sample data from a remote API.
 
 - Helpful blog [How to fetch data with React Hooks?](https://www.robinwieruch.de/react-hooks-fetch-data/) by [Robin Wieruch](https://github.com/rwieruch).
 
