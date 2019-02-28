@@ -15,8 +15,8 @@ components. A custom hook `useAxiosGet` is introduced in an example service func
 ## hat tips
 
 - **simple-hooks** is based in part on the Udemy instruction of 
-[Stephen Grider](https://github.com/StephenGrider). Stephen Grider's  
-[Modern React with Redux - [2019 Update]](https://www.udemy.com/react-redux/learn/v4/content) now includes a helpful 
+[Stephen Grider](https://github.com/StephenGrider) including  
+[Modern React with Redux - [2019 Update]](https://www.udemy.com/react-redux/learn/v4/content) which is a helpful 
 primer on React hooks: 
 [Section 25: Hooks with Functional Components](https://www.udemy.com/react-redux/learn/v4/overview).
 
