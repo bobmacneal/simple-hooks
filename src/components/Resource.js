@@ -1,34 +1,30 @@
 import React, {useState} from 'react'
-import {Tab, Tabs, withStyles} from '@material-ui/core'
+import {Tab, Tabs} from '@material-ui/core'
 import ItemList from './ItemList'
 import PhotoIcon from '@material-ui/icons/Photo'
 import PostIcon from '@material-ui/icons/Notes'
-import {PropTypes} from 'prop-types'
-import {RESOURCE_TYPE} from '../constants'
+import {resourceCategory} from '../constants'
 import TodoIcon from '@material-ui/icons/EventNote'
 import UserIcon from '@material-ui/icons/PeopleOutline'
 
-function Resource ({classes}) {
-  // Following uses array destructuring.
-  // The first element is the value. The second element is a setter.
-  // Finally, useState(RESOURCE_TYPE.POSTS) is the initial value.
-  const [resourceType, setResourceType] = useState(RESOURCE_TYPE.TODOS)
+function Resource () {
+  const [resourceType, setResourceType] = useState(resourceCategory.TODOS)
   const [resourceFields, setResourceFields] = useState(['id', 'title'])
 
   function handleSwitchTab (event, value) {
     setResourceType(value)
 
     switch(value) {
-      case RESOURCE_TYPE.USERS:
+      case resourceCategory.USERS:
         setResourceFields(['id', 'name', 'email'])
         break;
-      case RESOURCE_TYPE.POSTS:
+      case resourceCategory.POSTS:
         setResourceFields(['id', 'title', 'body'])
         break;
-      case RESOURCE_TYPE.PHOTOS:
+      case resourceCategory.PHOTOS:
         setResourceFields(['id', 'title', 'url'])
         break;
-      default: // RESOURCE_TYPE.TODOS
+      default: // resourceCategory.TODOS
         setResourceFields(['id', 'title'])
     }
   }
@@ -44,25 +40,25 @@ function Resource ({classes}) {
         <Tab
           icon={<TodoIcon />}
           label="Todos"
-          value={RESOURCE_TYPE.TODOS}
+          value={resourceCategory.TODOS}
         />
         <Tab
           icon={<PostIcon />}
           label="Posts"
-          value={RESOURCE_TYPE.POSTS}
+          value={resourceCategory.POSTS}
         />
         <Tab
           icon={<PhotoIcon />}
           label="Photos"
-          value={RESOURCE_TYPE.PHOTOS}
+          value={resourceCategory.PHOTOS}
         />
         <Tab
           icon={<UserIcon />}
           label="Users"
-          value={RESOURCE_TYPE.USERS}
+          value={resourceCategory.USERS}
         />
       </Tabs>
-      <div className={classes.mainContent}>
+      <div>
         <ItemList
           resourceType={resourceType}
           fields={resourceFields}
@@ -72,14 +68,4 @@ function Resource ({classes}) {
   )
 }
 
-Resource.propTypes = {
-  classes: PropTypes.object.isRequired,
-}
-
-const styles = theme => ({
-  mainContent: {
-    paddingTop: theme.spacing.unit * 3,
-  },
-})
-
-export default withStyles(styles)(Resource)
+export default Resource
