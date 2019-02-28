@@ -1,11 +1,11 @@
+import {CircularProgress, Typography, withStyles} from '@material-ui/core'
 import {getResources} from '../services/resourcesService'
 import {ID_FIELD} from '../constants'
 import {PropTypes} from 'prop-types'
 import React from 'react'
-import {withStyles} from '@material-ui/core'
 
 function ItemList ({classes, resourceType, fields}) {
-  const resources = getResources(resourceType)
+  const {data, loading, error} = getResources(resourceType)
 
   const renderRow = (resourceItem) => {
     const row = []
@@ -35,19 +35,33 @@ function ItemList ({classes, resourceType, fields}) {
     return row
   }
 
-  return (
-    <React.Fragment>
-      {resources.map(
-        (resource) => {
-          return (
-            <div className={classes.list} key={resource.id}>
-              {renderRow(resource)}
-            </div>
-          )
-        }
-      )}
-    </React.Fragment>
-  )
+  if (loading) {
+    return (
+      <div className={classes.progressContainer}>
+        <CircularProgress disableShrink={Boolean(true)} />
+      </div>
+    )
+  } else if (error) {
+    return (
+      <div className={classes.errorContainer}>
+        <Typography color="error">{error}</Typography>
+      </div>
+    )
+  } else {
+    return (
+      <div className={classes.listContainer}>
+        {data.map(
+          (item, index) => {
+            return (
+              <div className={classes.listItem} key={index}>
+                {renderRow(item)}
+              </div>
+            )
+          }
+        )}
+      </div>
+    )
+  }
 }
 
 ItemList.propTypes = {
@@ -57,17 +71,30 @@ ItemList.propTypes = {
 }
 
 const styles = theme => ({
-  list: {
+  errorContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    height: theme.spacing.unit * 5,
+  },
+  idField: {
+    paddingBottom: theme.spacing.unit * 2,
+    paddingTop: theme.spacing.unit * 2,
+    width: theme.spacing.unit * 8,
+  },
+  listContainer: {
+    marginTop: theme.spacing.unit * 6,
+  },
+  listItem: {
     borderBottom: 'solid 1px silver',
     display: 'flex',
     flexWrap: 'wrap',
     flexDirection: 'row',
     width: '100%',
   },
-  idField: {
-    paddingBottom: theme.spacing.unit * 2,
-    paddingTop: theme.spacing.unit * 2,
-    width: theme.spacing.unit * 8,
+  progressContainer: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    height: theme.spacing.unit * 5,
   },
   textField: {
     flexGrow: 1,

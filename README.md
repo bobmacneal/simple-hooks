@@ -1,6 +1,6 @@
 # simple-hooks
 This is a sample ReactJs application that demonstrates how to use react hooks _useEffect_ and _useState_ in function-based 
-components.
+components. A custom hook `useAxiosGet` is introduced in an example service function as a general pattern for axios GET requests. `useAxiosGet` returns a `{data, loading, error}` object invoked by a list component. 
 
 ## setup
 
@@ -14,13 +14,13 @@ components.
 
 ## hat tips
 
-- **simple-hooks** is based on the exemplary Udemy instruction of 
-[Stephen Grider](https://github.com/StephenGrider). Stephen Grider's  
-[Modern React with Redux - [2019 Update]](https://www.udemy.com/react-redux/learn/v4/content) now includes a helpful 
-primer on React hooks: 
+- **simple-hooks** was inspired by 
+[Stephen Grider's](https://github.com/StephenGrider) Udemy course [Modern React with Redux - [2019 Update]](https://www.udemy.com/react-redux/learn/v4/content) which provides a primer on React hooks: 
 [Section 25: Hooks with Functional Components](https://www.udemy.com/react-redux/learn/v4/overview).
 
-- **simple-hooks** uses [JSONPlaceholder](https://jsonplaceholder.typicode.com/), the _"Fake Online REST API for 
-Testing and Prototyping"_, to fetch post, todo, and photo data from a remote API.
+- **simple-hooks** uses [JSONPlaceholder](https://jsonplaceholder.typicode.com/), the "Fake Online REST API for 
+Testing and Prototyping", to make `axios` GET requests to fetch _posts, todos, users,_ and _photos_ data from a remote API.
 
-- **simple-hooks** was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Helpful blog [How to fetch data with React Hooks?](https://www.robinwieruch.de/react-hooks-fetch-data/) by [Robin Wieruch](https://github.com/rwieruch).
+
+- Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
