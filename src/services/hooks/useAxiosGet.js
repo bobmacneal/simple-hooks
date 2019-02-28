@@ -1,28 +1,26 @@
-import {useEffect, useState} from 'react';
-import axios from 'axios';
+import {useEffect, useState} from 'react'
+import axios from 'axios'
 
 export function useAxiosGet(url) {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  const [data, setData] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(false)
 
   const fetchData = async () => {
-    setError(false);
-    setLoading(true);
-
+    setError(false)
+    setLoading(true)
     try {
       const response = await axios.get(url)
       setData(response.data)
     } catch (error) {
-      setError(true);
+      setError(true)
     }
-
-    setLoading(false);
-  };
+    setLoading(false)
+  }
 
   useEffect(() => {
-    fetchData();
-  }, [url]);
+    fetchData()
+  }, [url])
 
   return {data, loading, error}
 }
