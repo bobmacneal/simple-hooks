@@ -15,9 +15,7 @@ components. A custom hook `useAxiosGet` is introduced in an example service func
 ## hat tips
 
 - **simple-hooks** was inspired by 
-[Stephen Grider's](https://github.com/StephenGrider) Udemy course  
-[Modern React with Redux - [2019 Update]](https://www.udemy.com/react-redux/learn/v4/content) which provides a  
-primer on React hooks: 
+[Stephen Grider's](https://github.com/StephenGrider) Udemy course [Modern React with Redux - [2019 Update]](https://www.udemy.com/react-redux/learn/v4/content) which provides a primer on React hooks: 
 [Section 25: Hooks with Functional Components](https://www.udemy.com/react-redux/learn/v4/overview).
 
 - **simple-hooks** uses [JSONPlaceholder](https://jsonplaceholder.typicode.com/), the _"Fake Online REST API for 
