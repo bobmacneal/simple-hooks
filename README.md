@@ -1,5 +1,5 @@
 # simple-hooks
-This is a sample ReactJs application. It demonstrates one way to use React's built-in hooks such as _useEffect_ and _useState_, as well as shows an an example of a custom hook in function-based components. A React custom hook `useAxiosGetItems` is introduced in a service function that invokes an [axios](https://github.com/axios/axios) GET request. Each successful request to the [JSONPlaceholder](https://jsonplaceholder.typicode.com/) API displays a list of sample data items corresponding to the tab clicked by the user.
+This is a sample ReactJs application. It demonstrates one way to use React's built-in hooks such as _useEffect_ and _useState_, as well as shows an an example of a custom hook in function-based components. Each successful request to the [JSONPlaceholder](https://jsonplaceholder.typicode.com/) API displays a list of sample data items corresponding to the tab clicked by the user.
 
 ---
 ![users UsersList component](https://github.com/bobmacneal/simple-hooks/blob/master/src/images/UsersList.png)
