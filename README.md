@@ -1,9 +1,8 @@
 # simple-hooks
-This is a sample ReactJs application that demonstrates how to use react hooks _useEffect_ and _useState_ in function-based 
-components. A custom hook `useAxiosGet` is introduced in an example service function as a general pattern for axios GET requests. `useAxiosGet` returns a `{data, loading, error}` object invoked by a list component. 
+This is a sample ReactJs application. It demonstrates one way to use React's built-in hooks such as _useEffect_ and _useState_, as well as shows an an example of a custom hook in function-based components. A React custom hook `useAxiosGetItems` is introduced in a service function that invokes an [axios](https://github.com/axios/axios) GET request. Each successful request to the [JSONPlaceholder](https://jsonplaceholder.typicode.com/) API displays a list of sample data items corresponding to the tab clicked by the user.
 
 ---
-![search Search component](https://github.com/bobmacneal/simple-hooks-search/blob/master/src/images/UsersList.png)
+![users UsersList component](https://github.com/bobmacneal/simple-hooks/blob/master/src/images/UsersList.png)
 
 ### Custom Hook
 
@@ -19,16 +18,13 @@ A React custom hook `useAxiosGetItems` is demonstrated. The custom hook uses [ax
 
 - Run app locally: `yarn start`
 
-
 ## hat tips
 
 - **simple-hooks** was inspired by 
 [Stephen Grider's](https://github.com/StephenGrider) Udemy course [Modern React with Redux - [2019 Update]](https://www.udemy.com/react-redux/learn/v4/content) which provides a primer on React hooks: 
-[Section 25: Hooks with Functional Components](https://www.udemy.com/react-redux/learn/v4/overview).
+[Section 25: Hooks with Functional Components](https://www.udemy.com/react-redux/learn/v4/overview). [How to fetch data with React Hooks](https://www.robinwieruch.de/react-hooks-fetch-data/) by [Robin Wieruch](https://github.com/rwieruch) also informed this example.
 
 - **simple-hooks** uses [JSONPlaceholder](https://jsonplaceholder.typicode.com/), the "Fake Online REST API for 
-Testing and Prototyping", to make `axios` GET requests to fetch _posts, todos, users,_ and _photos_ data from a remote API.
-
-- Helpful blog [How to fetch data with React Hooks?](https://www.robinwieruch.de/react-hooks-fetch-data/) by [Robin Wieruch](https://github.com/rwieruch).
+Testing and Prototyping", to make `axios` GET requests to fetch _todos, posts, photos,_ and _users_ data from a remote API.
 
 - Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
