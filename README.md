@@ -25,6 +25,6 @@ A React custom hook `useAxiosGetItems` is demonstrated. The custom hook uses [ax
 [Section 25: Hooks with Functional Components](https://www.udemy.com/react-redux/learn/v4/overview). [How to fetch data with React Hooks](https://www.robinwieruch.de/react-hooks-fetch-data/) by [Robin Wieruch](https://github.com/rwieruch) also informed this example.
 
 - **simple-hooks** uses [JSONPlaceholder](https://jsonplaceholder.typicode.com/), the "Fake Online REST API for 
-Testing and Prototyping", to make `axios` GET requests to fetch _posts, todos, users,_ and _photos_ data from a remote API.
+Testing and Prototyping", to make `axios` GET requests to fetch _todos, posts, photos,_ and _users_ data from a remote API.
 
 - Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
