@@ -18,7 +18,7 @@ A React custom hook `useAxiosGetItems` is demonstrated. The custom hook uses [ax
 
 - Run app locally: `yarn start`
 
-## hat tips
+### Hat Tips
 
 - **simple-hooks** was inspired by 
 [Stephen Grider's](https://github.com/StephenGrider) Udemy course [Modern React with Redux - [2019 Update]](https://www.udemy.com/react-redux/learn/v4/content) which provides a primer on React hooks: 
@@ -28,3 +28,5 @@ A React custom hook `useAxiosGetItems` is demonstrated. The custom hook uses [ax
 Testing and Prototyping", to make `axios` GET requests to fetch _todos, posts, photos,_ and _users_ data from a remote API.
 
 - Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+- See companion [simple-hooks-search](https://github.com/bobmacneal/simple-hooks-search) for a sample search application.
