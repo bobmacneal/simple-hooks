@@ -12,7 +12,7 @@ A React custom hook `useAxiosGetItems` is demonstrated. The custom hook uses [ax
 
 ### Setup
 
-1. Clone the repository: `git clone https://github.com/bobmacneal/simple-hooks-search.git`
+1. Clone the repository: `git clone https://github.com/bobmacneal/simple-hooks.git`
 2. Install [Yarn](https://yarnpkg.com) for package management. 
 3. Install node dependencies using yarn: `yarn`
 
