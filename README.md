@@ -29,6 +29,6 @@ A React custom hook `useAxiosGetItems` is demonstrated. The custom hook uses [ax
 - **simple-hooks** uses [JSONPlaceholder](https://jsonplaceholder.typicode.com/), the "Fake Online REST API for 
 Testing and Prototyping", to make `axios` GET requests to fetch _todos, posts, photos,_ and _users_ data from a remote API.
 
-- Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- **simple-hooks** was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 - See companion [simple-hooks-search](https://github.com/bobmacneal/simple-hooks-search) for a sample search application.
