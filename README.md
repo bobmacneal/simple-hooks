@@ -4,6 +4,8 @@ This is a sample ReactJs application. It demonstrates one way to use React's bui
 ---
 ![users UsersList component](https://github.com/bobmacneal/simple-hooks/blob/master/src/images/UsersList.png)
 
+[Material-UI](https://material-ui.com/) React components are used for design and functional simplicity.
+
 ### Custom Hook
 
 A React custom hook `useAxiosGetItems` is demonstrated. The custom hook uses [axios](https://github.com/axios/axios) to request search results from the [Hacker News search API](https://hn.algolia.com/api). `useAxiosGetItems` is referenced by a service layer function called `searchHackerNews`. The custom hook returns search results, a loading boolean for a progress indicator, and any HTTP errors that occur during the request: `return {listItems, loading, error}`.
