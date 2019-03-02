@@ -1,5 +1,5 @@
 # simple-hooks
-This is a sample ReactJs application. It demonstrates one way to use React's built-in hooks such as _useEffect_ and _useState_, as well as shows an an example of a custom hook in function-based components. A custom hook `useAxiosGetItems` is introduced in a service function for an axios GET requests. 
+This is a sample ReactJs application. It demonstrates one way to use React's built-in hooks such as _useEffect_ and _useState_, as well as shows an an example of a custom hook in function-based components. A React custom hook `useAxiosGetItems` is introduced in a service function that invokes an axios GET request. 
 
 ---
 ![users UsersList component](https://github.com/bobmacneal/simple-hooks/blob/master/src/images/UsersList.png)
