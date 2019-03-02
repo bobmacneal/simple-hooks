@@ -93,7 +93,7 @@ const styles = theme => ({
   },
   progressContainer: {
     display: 'flex',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-start',
     height: theme.spacing.unit * 5,
   },
   textField: {
