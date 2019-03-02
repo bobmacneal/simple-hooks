@@ -5,7 +5,7 @@ import {PropTypes} from 'prop-types'
 import React from 'react'
 
 function ItemList ({classes, resourceType, fields}) {
-  const {data, loading, error} = getResources(resourceType)
+  const {listItems, loading, error} = getResources(resourceType)
 
   const renderRow = (resourceItem) => {
     const row = []
@@ -50,7 +50,7 @@ function ItemList ({classes, resourceType, fields}) {
   } else {
     return (
       <div className={classes.listContainer}>
-        {data.map(
+        {listItems.map(
           (item, index) => {
             return (
               <div className={classes.listItem} key={index}>

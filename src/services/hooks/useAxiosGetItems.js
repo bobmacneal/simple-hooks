@@ -1,17 +1,17 @@
 import {useEffect, useState} from 'react'
 import axios from 'axios'
 
-export function useAxiosGet(url) {
-  const [data, setData] = useState([])
+export function useAxiosGetItems(url) {
+  const [listItems, setListItems] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
 
-  const fetchData = async () => {
+  const requestData = async () => {
     setError(false)
     setLoading(true)
     try {
       const response = await axios.get(url)
-      setData(response.data)
+      setListItems(response.data)
     } catch (error) {
       setError(true)
     }
@@ -19,8 +19,8 @@ export function useAxiosGet(url) {
   }
 
   useEffect(() => {
-    fetchData()
+    requestData()
   }, [url])
 
-  return {data, loading, error}
+  return {listItems, loading, error}
 }
