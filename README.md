@@ -1,9 +1,8 @@
 # simple-hooks
-This is a sample ReactJs application that demonstrates how to use react hooks _useEffect_ and _useState_ in function-based 
-components. A custom hook `useAxiosGet` is introduced in an example service function as a general pattern for axios GET requests. `useAxiosGet` returns a `{data, loading, error}` object invoked by a list component. 
+This is a sample ReactJs application. It demonstrates one way to use React's built-in hooks such as _useEffect_ and _useState_, as well as custom hooks in function-based components. A custom hook `useAxiosGetItems` is introduced in an example service function as a general pattern for axios GET requests. 
 
 ---
-![search Search component](https://github.com/bobmacneal/simple-hooks-search/blob/master/src/images/UsersList.png)
+![users UsersList component](https://github.com/bobmacneal/simple-hooks/blob/master/src/images/UsersList.png)
 
 ### Custom Hook
 
@@ -18,7 +17,6 @@ A React custom hook `useAxiosGetItems` is demonstrated. The custom hook uses [ax
 ### Run
 
 - Run app locally: `yarn start`
-
 
 ## hat tips
 
